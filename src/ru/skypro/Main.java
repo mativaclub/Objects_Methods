@@ -8,21 +8,11 @@ public class Main {
                 new Author("Джим", "Лоулесс"), 2017);
         book1.setYearOfPublication(2020);
         System.out.println(book1);
-//        System.out.println("book1.titleOfBook = " + book1.getTitleOfBook());
-//        System.out.println("book1.nameOfAuthor = "
-//                + book1.getAuthor().getNameOfAuthor() + " "
-//                + book1.getAuthor().getSurnameOfAuthor());
-//        System.out.println("book1.yearOfPublication = " + book1.getYearOfPublication());
-
 
         Book book2 = new Book("Исповедь экономического убийцы",
                 new Author("Джон", "Перкинс"), 2018);
         System.out.println(book2);
-//        System.out.println("book2.titleOfBook = " + book2.getTitleOfBook());
-//        System.out.println("book2.nameOfAuthor = "
-//                + book2.getAuthor().getNameOfAuthor() + " "
-//                + book2.getAuthor().getSurnameOfAuthor());
-//        System.out.println("book2.yearOfPublication = " + book2.getYearOfPublication());
+
 
         Book book3 = new Book("Исповедь экономического убийцы",
                 new Author("Джон", "Перкинс"), 2018);
@@ -30,6 +20,11 @@ public class Main {
 
         System.out.println(book1.equals(book3));
         System.out.println(book2.equals(book3));
+
+        System.out.println(new Author("John", "Perkins").hashCode());
+        System.out.println(new Book("Исповедь экономического убийцы",
+                new Author("John", "Perkins"),
+                2018).hashCode());
     }
 }
 
